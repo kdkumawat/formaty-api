@@ -9,3 +9,8 @@ id = "f51ffe0c678647d79bc1f7877352000f"
 [[kv_namespaces]]
 binding = "RATE_LIMIT_KV"
 id = "d886d519a28d4921b5484b85b4464142"
+
+[observability]
+[observability.logs]
+enabled = false
+invocation_logs = true
