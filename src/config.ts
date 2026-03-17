@@ -1,0 +1,6 @@
+export const CONFIG = {
+  TTL_SECONDS: 60 * 60 * 24 * 7,
+  RATE_LIMIT_WINDOW: 60,
+  RATE_LIMIT_MAX: 10,
+  MAX_BODY_SIZE: 1_000_000,
+};
