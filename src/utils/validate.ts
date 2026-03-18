@@ -1,6 +1,5 @@
 export interface PlaygroundPayload {
   input: string;
-  output: string;
   format: string;
   options?: Record<string, unknown>;
 }
@@ -22,9 +21,6 @@ export function validatePlaygroundPayload(
   if (typeof obj.input !== "string") {
     return { ok: false, error: "Missing or invalid 'input'" };
   }
-  if (typeof obj.output !== "string") {
-    return { ok: false, error: "Missing or invalid 'output'" };
-  }
   if (typeof obj.format !== "string") {
     return { ok: false, error: "Missing or invalid 'format'" };
   }
@@ -38,7 +34,6 @@ export function validatePlaygroundPayload(
     ok: true,
     data: {
       input: obj.input,
-      output: obj.output,
       format: obj.format,
       options: (options as Record<string, unknown>) ?? {},
     },
